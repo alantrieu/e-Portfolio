@@ -1,0 +1,51 @@
+.homepage {
+    .welcome-text {
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        position: absolute;
+        left: 10%;
+        top: 40%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+    }
+
+    h1 {
+        font-size: 53px;
+        margin: 0;
+        font-weight: 400;
+
+        &::before {
+            content: '<Welcome>';
+            font-size: 18px;
+            position: absolute;
+            margin-top: -40px;
+            left: -15px;
+            animation: fadeIn 1s 1.7s backwards;
+            // opacity: 0.6;
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        margin: 20px 0 0;
+        font-size: 16px;
+        max-width: 540px;
+        
+        &::after {
+            content: '</Welcome>';
+            // font-family: 'La Belle Aurore', cursive;
+            // color: #ffd700;
+            font-size: 18px;
+            position: absolute;
+            margin-top: 90px;
+            // margin-left: 20px;
+            left: -15px;
+            animation: fadeIn 1s 1.7s backwards;
+            opacity: 0.6;
+        }
+    }
+}
