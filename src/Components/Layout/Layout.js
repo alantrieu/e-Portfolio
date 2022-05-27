@@ -1,11 +1,17 @@
 import './Layout.scss';
 
 import Sidebar from '../UI/Sidebar';
+import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
 
     return (
-        <Sidebar />
+        <div className="App">
+            <Sidebar />
+            <div className="page">
+                <Outlet />
+            </div>
+        </div>
     );
 };
 
