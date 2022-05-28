@@ -1,0 +1,86 @@
+.aboutme {
+    font-family: 'Calibre';
+
+    .aboutme-text {
+        position: absolute;
+        left: 23%;
+        top: 45%;
+        transform: translateY(-50%);
+        width: 40%;
+        animation: fadeIn 1s 1s backwards;
+    }
+
+    p {
+        font-size: 20px;
+        max-width: 540px;
+        margin-top: -1%;
+        color: #4D9FCB;
+    }
+
+    p.text-top {
+        &::before {
+            content: '<About Me>';
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            margin-top: -40px;
+            left: -15px;
+            animation: fadeIn 1s 1.7s backwards;
+            color: #d7983c;
+        }
+    }
+
+    p.text-bottom {
+        &::after {
+                content: '</About Me>';
+                font-size: 18px;
+                font-family: 'Courier New', Courier, monospace;
+                position: absolute;
+                margin-top: 40px;
+                left: -15px;
+                animation: fadeIn 1s 1.7s backwards;
+                color: #d7983c;
+        }
+    }
+
+    .skills {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(140px, 200px));
+        grid-gap: 0 10px;
+        padding: 0;
+        margin-left: 100%;
+        top: 20%;
+        font-size: 24px;
+        color: #4D9FCB;
+        animation: fadeIn 1s 0.9s backwards;
+
+        li {
+            list-style-type: '▹';
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        &::before {
+            content: '<Skills>';
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            margin-top: -40px;
+            left: -15px;
+            animation: fadeIn 1s 1.7s backwards;
+            color: #d7983c;
+        }
+
+        &::after {
+            content: '</Skills>';
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            margin-top: 115px;
+            left: -15px;
+            animation: fadeIn 1s 1.7s backwards;
+            color: #d7983c;
+        }
+    }
+}
