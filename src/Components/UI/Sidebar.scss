@@ -1,9 +1,4 @@
 .nav-bar {
-    // background: #022c43;
-    // background: #61dbfc;
-    // background: #ccd6f6;
-    // background: #000000;
-    // background: #08d3ad;
     width: 90px;
     height: 100%;
     position: absolute;
@@ -53,7 +48,6 @@
             }
 
             &:hover {
-                // color: #27a1ca;
                 color: #4dcbb8;
             
                 svg {
@@ -82,22 +76,22 @@
     
             &:first-child {
                 &::after {
-                    content: 'HOME';
+                    content: 'HELLO';
                 }
             }
         }
 
         a.about-link:after {
-            content: 'ABOUT';
+            content: 'ABOUT ME';
         }
 
         a.contact-link:after {
-            content: 'CONTACT';
+            content: 'SAY HI';
         }
 
         a.active svg {
-            // color: #27a1ca;
             color: #4dcbb8;
+            // color: #4D9FCB;
         }
     }
 
