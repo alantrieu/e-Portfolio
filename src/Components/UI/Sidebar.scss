@@ -10,7 +10,6 @@
     top: 0;
     z-index: 3;
     min-height: 500px;
-    // font-family: 'SFMono';
     font-family: 'Calibre';
 
     .logo {
@@ -54,7 +53,8 @@
             }
 
             &:hover {
-                color: #27a1ca;
+                // color: #27a1ca;
+                color: #4dcbb8;
             
                 svg {
                     opacity: 0;
@@ -96,7 +96,8 @@
         }
 
         a.active svg {
-            color: #27a1ca;
+            // color: #27a1ca;
+            color: #4dcbb8;
         }
     }
 
@@ -159,7 +160,7 @@
     -webkit-animation-iteration-count: infinite;
 
     &:hover {
-        color: #27a1ca;
+        color: #4dcbb8;
         animation-name: bounce;
     }
 }
