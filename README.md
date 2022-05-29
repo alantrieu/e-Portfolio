@@ -12,6 +12,10 @@
 - react router dom
 - sass
 
+### I used
+- FontAwesome svg icons
+- email js https://www.emailjs.com/docs/examples/reactjs/ 
+
 - used Canva
 
 <!-- prettier -->
