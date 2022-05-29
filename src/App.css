@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+/* $primary-color: #ffd700; */
+
+@import 'animate.css';
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'SFMono';
+    src: url('./assets/fonts/SFMono/SFMono-Regular.woff') format('woff');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: 'SFMonoMedium';
+    src: url('./assets/fonts/SFMono/SFMono-Medium.woff') format('woff');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+    font-family: 'SFMonoBold';
+    src: url('./assets/fonts/SFMono/SFMono-Semibold.woff') format('woff');
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+    font-family: 'Calibre';
+    src: url('./assets/fonts/Calibre/Calibre-Regular.woff') format('woff');
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    font-family: 'CalibreLight';
+    src: url('./assets/fonts/Calibre/Calibre-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'CalibreMedium';
+    src: url('./assets/fonts/Calibre/Calibre-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'CalibreBold';
+    src: url('./assets/fonts/Calibre/Calibre-Semibold.woff') format('woff');
+}
+
+input,
+textarea {
+    font-family: 'SFMonoBold';
 }

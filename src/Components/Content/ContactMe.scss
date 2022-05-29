@@ -1,0 +1,143 @@
+.contactme {
+    font-family: 'Calibre';
+    position: absolute;
+    left: 23%;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 40%;
+    // animation: fadeIn 1s 1s backwards;
+
+    .contactme-text {
+        animation: fadeIn 1s 1s backwards;
+        font-size: 24px;
+        margin: 0;
+
+        h1 {
+            color: #4dcbb8;
+            font-weight: 400;
+            padding-bottom: -20%;
+            text-align: center;
+
+            &::before {
+                content: '<ContactMe>';
+                font-size: 18px;
+                font-family: 'Courier New', Courier, monospace;
+                position: absolute;
+                margin-top: -40px;
+                left: -15px;
+                animation: fadeIn 1s 3.9s backwards;
+                color: #d7983c;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            max-width: 540px;
+            // margin-top: -1%;
+            color: #4D9FCB;
+        }
+    }
+}
+
+.contact-form {
+    width: 100%;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 2s 2s;
+    animation-fill-mode: forwards;
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            overflow: hidden;
+            display: block;
+            clear: both;
+            width: 100%;
+        }
+
+        li.half {
+            width: 49%;
+            margin-left: 2%;
+            float: left;
+            clear: none;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    input[type='text'], input[type='email'] {
+        width: 100%;
+        border: 0;
+        background: #112A50;
+        height: 50px;
+        font-size: 16px;
+        color: #4ac4e2;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        width: 100%;
+        border: 0;
+        background: #112A50;
+        height: 50px;
+        font-size: 16px;
+        color: #4ac4e2;
+        padding: 20px;
+        box-sizing: border-box;
+        min-height: 150px;
+        resize: none !important;
+    }
+
+    // https: //codepen.io/konradwax/pen/woPNqJ
+    .send-button {
+        color: #4dcbb8;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 8px 10px;
+        border: 1px solid #4dcbb8;
+        float: right;
+        border-radius: 4px;
+        background: 0 0;
+        margin-right: 10px;
+        transition: all 0.2s linear 0s;
+        
+        &::after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 91.5%;
+            right: -5%;
+            padding-right: 10px;
+            transition: 0.5s;
+        }
+
+        &:hover {
+            padding-right: 25px;
+            padding-left: 8px;
+
+            &::after {
+                opacity: 1;
+                right: 10px;
+            }
+        }
+    }
+
+    &::after {
+        content: '</ContactMe>';
+        font-size: 18px;
+        font-family: 'Courier New', Courier, monospace;
+        position: absolute;
+        left: -15px;
+        animation: fadeIn 1s 3.9s backwards;
+        color: #d7983c;
+    }
+}
