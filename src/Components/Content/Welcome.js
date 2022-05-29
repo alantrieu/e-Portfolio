@@ -1,8 +1,8 @@
 import React from "react";
 
-import './Homepage.scss';
+import './Welcome.scss';
 
-const Homepage = () => {
+const Welcome = () => {
     return (
         <div className="homepage">
             <div className="welcome-text">
@@ -16,4 +16,4 @@ const Homepage = () => {
     );
 };
 
-export default Homepage;
+export default Welcome;
