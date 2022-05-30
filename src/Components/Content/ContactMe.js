@@ -1,8 +1,29 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactMe.scss';
 
 const ContactMe = () => {
+    const [contactName, setContactName] = useState('');
+    const [contactEmail, setContactEmail] = useState('');
+    const [contactSubject, setContactSubject] = useState('');
+    const [contactMsg, setContactMsg] = useState('');
+
+    const nameInputHandler = (event) => {
+        setContactName(event.target.value);
+    };
+
+    const emailInputHandler = (event) => {
+        setContactEmail(event.target.value);
+    };
+
+    const subjectInputHandler = (event) => {
+        setContactSubject(event.target.value);
+    };
+
+    const msgInputHandler = (event) => {
+        setContactMsg(event.target.value);
+    };
+
     const formRef = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
@@ -17,12 +38,20 @@ const ContactMe = () => {
             .then(
                 () => {
                     alert('Message successfully sent!')
-                    window.location.reload(false)
+                    // window.location.reload(false);
+                    clearForm();
                 },
                 () => {
                     alert('Failed to send the message, please try again')
                 }
-            )
+            );
+    };
+
+    const clearForm = () => {
+        setContactName('');
+        setContactEmail('');
+        setContactSubject('');
+        setContactMsg('');
     };
 
     return (
@@ -41,6 +70,8 @@ const ContactMe = () => {
                                 type="text"
                                 name="name"
                                 placeholder="Name"
+                                value={contactName}
+                                onChange={nameInputHandler}
                                 required
                             />
                         </li>
@@ -49,6 +80,8 @@ const ContactMe = () => {
                                 type="email"
                                 name="email"
                                 placeholder="Email"
+                                value={contactEmail}
+                                onChange={emailInputHandler}
                                 required
                             />
                         </li>
@@ -57,6 +90,8 @@ const ContactMe = () => {
                                 placeholder="Subject" 
                                 type="text" 
                                 name="subject" 
+                                value={contactSubject}
+                                onChange={subjectInputHandler}
                                 required 
                             />
                         </li>
@@ -64,6 +99,8 @@ const ContactMe = () => {
                             <textarea 
                                 placeholder='Message'
                                 name="message"
+                                value={contactMsg}
+                                onChange={msgInputHandler}
                                 required
                             />
                         </li>
