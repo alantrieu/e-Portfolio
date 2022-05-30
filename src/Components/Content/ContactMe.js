@@ -3,8 +3,6 @@ import emailjs from '@emailjs/browser';
 import './ContactMe.scss';
 
 const ContactMe = () => {
-    
-
     const formRef = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
@@ -32,7 +30,7 @@ const ContactMe = () => {
             <div className='contactme-text'>
                 <h1>Contact Me!</h1>
                 <p>
-                    I'm interesting in asdasd
+                    I'm always open for a chat. Feel free to contact me about absolutely anything!
                 </p>
             </div>
             <div className='contact-form'>
