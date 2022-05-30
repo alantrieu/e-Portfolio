@@ -12,13 +12,17 @@
         transform: translateY(-50%);
         width: 40%;
         max-height: 90%;
-        animation: fadeIn 1s 1s backwards;
     }
 
     h1 {
         font-size: 24px;
         margin: 0;
         font-weight: 400;
+        animation: fadeIn 1s 2s backwards;
+    }
+
+    .greeting-text {
+        animation: fadeIn 1s 1s backwards;
 
         &::before {
             content: '<Welcome>';
@@ -27,9 +31,7 @@
             position: absolute;
             margin-top: -40px;
             left: -15px;
-            animation: fadeIn 1s 1.7s backwards;
-            // color: rgba(255, 255, 255, 0.662);
-            // color: #78ccf9;
+            animation: fadeIn 1s 3s backwards;
             color: #d7983c;
         }
     }
@@ -39,14 +41,15 @@
         // color: #788BF9;
         font-weight: 400;
         margin-top: 0%;
+        animation: fadeIn 1s 2s backwards;
     }
 
     p {
         font-size: 20px;
         max-width: 540px;
         margin-top: -7%;
-        // color: #4dcbb8;
         color: #4D9FCB;
+        animation: fadeIn 1s 3s backwards;
         
         &::after {
             content: '</Welcome>';
@@ -55,7 +58,7 @@
             position: absolute;
             margin-top: 40px;
             left: -15px;
-            animation: fadeIn 1s 1.7s backwards;
+            // animation: fadeIn 1s 3s backwards;
             // color: rgba(255, 255, 255, 0.662);
             // color: #78ccf9;
             color: #d7983c;
