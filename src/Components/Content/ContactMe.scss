@@ -1,11 +1,10 @@
 .contactme {
     font-family: 'Calibre';
     position: absolute;
-    left: 23%;
+    left: 30%;
     top: 45%;
     transform: translateY(-50%);
     width: 40%;
-    // animation: fadeIn 1s 1s backwards;
 
     .contactme-text {
         animation: fadeIn 1s 1s backwards;
@@ -34,8 +33,9 @@
             font-size: 20px;
             max-width: 750px;
             text-align: center;
-            // margin-top: -1%;
-            color: #4D9FCB;
+            margin-top: -3%;
+            // color: #4D9FCB;
+            color: #4ac4e2;
         }
     }
 }
