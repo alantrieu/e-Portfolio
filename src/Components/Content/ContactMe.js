@@ -1,28 +1,32 @@
-import { useRef, useState } from 'react';
+import { useRef, } from 'react';
+import useInput from '../../hooks/useInput';
 import emailjs from '@emailjs/browser';
 import './ContactMe.scss';
 
 const ContactMe = () => {
-    const [contactName, setContactName] = useState('');
-    const [contactEmail, setContactEmail] = useState('');
-    const [contactSubject, setContactSubject] = useState('');
-    const [contactMsg, setContactMsg] = useState('');
+    const {
+        value: contactName,
+        valueInputHandler: nameInputHandler,
+        clear: clearName
+    } = useInput();
 
-    const nameInputHandler = (event) => {
-        setContactName(event.target.value);
-    };
+    const {
+        value: contactEmail,
+        valueInputHandler: emailInputHandler,
+        clear: clearEmail
+    } = useInput();
 
-    const emailInputHandler = (event) => {
-        setContactEmail(event.target.value);
-    };
+    const {
+        value: contactSubject,
+        valueInputHandler: subjectInputHandler,
+        clear: clearSubject
+    } = useInput();
 
-    const subjectInputHandler = (event) => {
-        setContactSubject(event.target.value);
-    };
-
-    const msgInputHandler = (event) => {
-        setContactMsg(event.target.value);
-    };
+    const {
+        value: contactMsg,
+        valueInputHandler: msgInputHandler,
+        clear: clearMsg
+    } = useInput();
 
     const formRef = useRef();
     const sendEmail = (e) => {
@@ -37,8 +41,7 @@ const ContactMe = () => {
             )
             .then(
                 () => {
-                    alert('Message successfully sent!')
-                    // window.location.reload(false);
+                    alert('Message successfully sent!');
                     clearForm();
                 },
                 () => {
@@ -48,10 +51,10 @@ const ContactMe = () => {
     };
 
     const clearForm = () => {
-        setContactName('');
-        setContactEmail('');
-        setContactSubject('');
-        setContactMsg('');
+        clearName();
+        clearEmail();
+        clearSubject();
+        clearMsg();
     };
 
     return (
